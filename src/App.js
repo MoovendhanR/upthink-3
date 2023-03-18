@@ -29,20 +29,24 @@ import Board from './Components/Board';
       description = 'Go to game start';
     }
     return (
+      <center>
       <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
+      </center>
     );
   });
 
   return (
     <div className="game">
+      <center>
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
       </div>
+      </center>
     </div>
   );
 }

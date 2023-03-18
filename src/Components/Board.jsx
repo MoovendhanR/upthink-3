@@ -18,12 +18,15 @@ function Board({ xIsNext, squares, onPlay }) {
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
+      
     } else {
       status = 'Next player: ' + (xIsNext ? 'X' : 'O');
     }
   
     return (
       <>
+
+      <center>
         <div className="status">{status}</div>
         <div className="board-row">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -40,6 +43,7 @@ function Board({ xIsNext, squares, onPlay }) {
           <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
           <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
         </div>
+      </center>
       </>
     );
   }

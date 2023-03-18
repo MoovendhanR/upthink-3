@@ -30,6 +30,7 @@ import Board from './Components/Board';
     }
     return (
       <center>
+        
       <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
@@ -40,6 +41,11 @@ import Board from './Components/Board';
   return (
     <div className="game">
       <center>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
